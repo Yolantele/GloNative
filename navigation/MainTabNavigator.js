@@ -18,7 +18,7 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'Home'}
+      name={'home'}
       image={focused ? require('../assets/images/home-icon-active.png') : require('../assets/images/home-icon.png')}
       imageHeight={20}
     />
@@ -34,7 +34,7 @@ WorkshopStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'Workshop'}
+      name={'workshop'}
       image={focused ? require('../assets/images/workshop-icon-active.png') : require('../assets/images/workshop-icon.png')}
       imageHeight={20}
     />
@@ -50,7 +50,7 @@ ProfileStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'Profile'}
+      name={'profile'}
       image={focused ? require('../assets/images/profile-icon-active.png') : require('../assets/images/profile-icon.png')}
       imageHeight={24}
     />
@@ -66,7 +66,7 @@ StatsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'Stats'}
+      name={'stats'}
       image={focused ? require('../assets/images/stats-icon-active.png') : require('../assets/images/stats-icon.png')}
       imageHeight={20}
     />

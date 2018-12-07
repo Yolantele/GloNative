@@ -5,25 +5,28 @@ import Styles from "../../assets/Styles";
 export default class CustomButon extends React.Component {
 
   render() {
-    let container = [localStyles.container]
+    let container = [styles.container]
     let { title, onPress, colour, disabled, type} = this.props
-    
+
+    if (type && type === 'round'){
+      container.push( {borderRadius: Styles.shape.roundCorner} )
+    }
+
     return(
       <TouchableOpacity
         style={container}
       >
         <Button 
-          style={type && type === 'round' ? container.push({borderRadius: Styles.shape.roundCorner}) : container}
           title={title}
           onPress={onPress}
-          color={disabled ? localStyles.disabled : colour || Styles.colours.darkText}
+          color={disabled ? styles.disabled : colour || Styles.colours.darkText}
         />
       </TouchableOpacity>
     )
   }
 }
 
-const localStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     backgroundColor: Styles.colours.white,
     height: 45,
@@ -38,9 +41,9 @@ const localStyles = StyleSheet.create({
     shadowColor: Styles.colours.black,
     shadowOffset: { y: 5 },
     shadowOpacity: 0.1,
-    shadowRadius: 6,
+    shadowRadius: 6
   },
   disabled: {
     color: Styles.colours.greyTransparent
-  },
+  }
 });

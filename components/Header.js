@@ -16,28 +16,28 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-    flex:1,
+    flex: 1,
+    height: Styles.layout.isIphoneX ? 90 : 60,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: "baseline",
+    alignItems: "center",
     backgroundColor: Styles.colours.backgroundLight,
     borderColor: Styles.colours.backgroundLight,
-    paddingLeft:20,
-    paddingRight:20,
-    paddingBottom: 10,
+    paddingLeft: 30,
+    paddingRight: 30,
+    shadowColor: Styles.colours.black,
+    shadowOffset: { y: 5 },
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
   },
   headerTitleStyle: {
     fontWeight: 'bold',
     color: Styles.colours.darkText,
-    fontSize: 18,
-    paddingBottom: 20,
-    marginBottom: 10,
+    fontSize: Styles.layout.isIphoneX ? 24 : 18,
   },
   menu: {
     fontWeight: '300',
     color: Styles.colours.darkText,
     fontSize: 12,
-    paddingBottom: 20,
-    marginBottom: 10,
   },
 });

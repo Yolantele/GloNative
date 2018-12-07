@@ -1,4 +1,5 @@
 import { Dimensions } from 'react-native';
+import { isIphoneX } from "react-native-iphone-x-helper";
 
 
 const COLOURS = {
@@ -52,15 +53,10 @@ const HEIGHT = Dimensions.get('window').height
 
 const LAYOUT = {
   isSmallDevice: WIDTH < 375,
+  isIphoneX : isIphoneX()
 }
 
 const EFFECTS = {
-  // subtle : {
-  //   shadowColor: COLOURS.black,
-  //   shadowOffset: { y: 5 },
-  //   shadowOpacity: 0.1,
-  //   shadowRadius: 10,
-  // }
 };
 
 module.exports = {

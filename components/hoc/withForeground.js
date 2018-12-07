@@ -5,25 +5,26 @@ import SideMenu from "../SideMenu";
 import Styles from "../../assets/Styles"
 
 
-const withForeground = (MyComponent) => {
+const withForeground = ( ScreenComponent ) => {
 	return class Foreground extends Component {
     
     static navigationOptions = {
       headerTitle: <Header/>,
       headerStyle: {
         backgroundColor: Styles.colours.backgroundLight,
-        height: 10,
+        height: Styles.layout.isIphoneX ? -10 : -5
       },
     }
     
 		render() {
+
 			return(
 				<View style={styles.wrapper}>
 					<SideMenu/>
           <ScrollView contentContainerStyle={styles.container}>
-            <MyComponent
-              {...this.props.children}
-              foreground={this.props.navigation.state.routeName ? this.props.navigation.state.routeName : null}
+            <ScreenComponent
+              {...this.props}
+              foregroundFor={this.props.navigation.state.routeName}
             />
           </ScrollView>
 				</View>
@@ -34,9 +35,11 @@ const withForeground = (MyComponent) => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    paddingTop: 15,
+    // paddingTop: 15,
     flex: 1,
-    backgroundColor: Styles.colours.background
+    backgroundColor: Styles.colours.background,
+    flexDirection: 'column',
+    justifyContent: "space-between"
   },
   container: {
     flex: 1,

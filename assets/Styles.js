@@ -15,7 +15,7 @@ const COLOURS = {
   lightestText: "#FFFFFF",
   lighterText: "#E7A7A7",
   lightText: "#9B9B9B",
-  darkText: "#57306C",
+  darkText: "#94578D",
   
   backgroundLight: "#FFF8F6",
   backgroundDark: "#FFC2B3",

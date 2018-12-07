@@ -1,3 +1,6 @@
+import { Dimensions } from 'react-native';
+
+
 const COLOURS = {
   primary: "#FB5268",
   secondary: "#FF94AA",
@@ -9,14 +12,14 @@ const COLOURS = {
   white: "#FFFFFF",
   informative: "#718CFB",
 
-
   lightestText: "#FFFFFF",
   lighterText: "#E7A7A7",
   lightText: "#9B9B9B",
   darkText: "#57306C",
   
-  backgroundLight: "#FFFFFF",
+  backgroundLight: "#FFF8F6",
   backgroundDark: "#FFC2B3",
+  backgroundDarkest: "#E7A7A7",
   background: "#FBE8E5",
 
   lightGrey: "#F8F8F8",
@@ -36,8 +39,35 @@ const COLOURS = {
     amber: "#FAA733",
     red: "#EF430F"
   },
+}
+
+const SHAPE = {
+  roundCorner: 30,
+  bluntCorner: 10,
+  sharpCorner: 2,
+}
+
+const WIDTH = Dimensions.get('window').width
+const HEIGHT = Dimensions.get('window').height
+
+const LAYOUT = {
+  isSmallDevice: WIDTH < 375,
+}
+
+const EFFECTS = {
+  // subtle : {
+  //   shadowColor: COLOURS.black,
+  //   shadowOffset: { y: 5 },
+  //   shadowOpacity: 0.1,
+  //   shadowRadius: 10,
+  // }
 };
 
 module.exports = {
   colours: COLOURS,
+  shape: SHAPE,
+  layout: LAYOUT,
+  width: WIDTH,
+  height: HEIGHT,
+  effects: EFFECTS
 }

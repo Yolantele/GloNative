@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import Styles from '../../assets/Styles'
 import Header from "../Header";
 import SideMenu from "../SideMenu";
+import Styles from "../../assets/Styles"
+
 
 const withForeground = (MyComponent) => {
 	return class Foreground extends Component {
     
     static navigationOptions = {
-      header: null
+      headerTitle: <Header/>,
+      headerStyle: {
+        backgroundColor: Styles.colours.backgroundLight,
+        height: 10,
+      },
     }
-		// constructor () {
-		// 	this.state = {
-		// 	}
-    // }
     
 		render() {
 			return(
 				<View style={styles.wrapper}>
-					<Header/>
 					<SideMenu/>
           <ScrollView contentContainerStyle={styles.container}>
             <MyComponent
-              {...this.props}
+              {...this.props.children}
+              foreground={this.props.navigation.state.routeName ? this.props.navigation.state.routeName : null}
             />
           </ScrollView>
 				</View>

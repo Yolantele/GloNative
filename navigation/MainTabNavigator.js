@@ -1,11 +1,13 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { createStackNavigator,  createBottomTabNavigator} from 'react-navigation';
+
+import Styles from '../assets/Styles'
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import WorkshopScreen from '../screens/WorkshopScreen';
+import StatsScreen from '../screens/StatsScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -16,45 +18,91 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={'Home'}
+      image={focused ? require('../assets/images/home-icon-active.png') : require('../assets/images/home-icon.png')}
+      imageHeight={20}
     />
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const WorkshopStack = createStackNavigator({
+  Workshop: WorkshopScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+WorkshopStack.navigationOptions = {
+  tabBarLabel: 'Workshop',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={'Workshop'}
+      image={focused ? require('../assets/images/workshop-icon-active.png') : require('../assets/images/workshop-icon.png')}
+      imageHeight={20}
     />
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const ProfileStack = createStackNavigator({
+  Profile: ProfileScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+ProfileStack.navigationOptions = {
+  tabBarLabel: 'Profile',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={'Profile'}
+      image={focused ? require('../assets/images/profile-icon-active.png') : require('../assets/images/profile-icon.png')}
+      imageHeight={24}
     />
   ),
 };
 
-export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
+const StatsStack = createStackNavigator({
+  Stats: StatsScreen,
 });
+
+StatsStack.navigationOptions = {
+  tabBarLabel: 'Stats',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={'Stats'}
+      image={focused ? require('../assets/images/stats-icon-active.png') : require('../assets/images/stats-icon.png')}
+      imageHeight={20}
+    />
+  ),
+};
+
+
+const TabScreens = createBottomTabNavigator(
+  {
+    HomeStack,
+    WorkshopStack,
+    StatsStack,
+    ProfileStack
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: Styles.colours.highlight,
+      inactiveTintColor: Styles.colours.darkestTransparency,
+      labelStyle: {
+        fontSize: 12,
+        fontWeight: '600'
+      },
+      style: {
+        backgroundColor: Styles.colours.backgroundLight,
+        borderColor: Styles.colours.backgroundLight,
+        borderLeftWidth: 10,
+        borderRightWidth: 10,
+        elevation: 10, //android drop shadow
+        shadowColor: Styles.colours.black,
+        shadowOffset: { y: 5 },
+        shadowOpacity: 0.1,
+        shadowRadius: 10,
+      },
+    }
+  }
+
+)
+
+export default TabScreens

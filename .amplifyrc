@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "loative-20181211120401-authRole",
+            "UnauthRoleArn": "arn:aws:iam::287054157333:role/loative-20181211120401-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::287054157333:role/loative-20181211120401-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "loative-20181211120401-deployment",
+            "UnauthRoleName": "loative-20181211120401-unauthRole",
+            "StackName": "loative-20181211120401",
+            "StackId": "arn:aws:cloudformation:eu-west-1:287054157333:stack/loative-20181211120401/d91817a0-fd3c-11e8-a70f-0a999da78b84"
+        }
+    }
+}

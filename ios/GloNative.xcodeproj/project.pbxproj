@@ -523,9 +523,6 @@
 		12F577C821B6583900977B1B /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				2EAB0A0261AF4E229B9DAC77 /* libRNGestureHandler.a */,
-				CB09502F3A5D489783128975 /* libRNVectorIcons.a */,
-				6A96B695A1D1481D94DB0B16 /* libRNVectorIcons-tvOS.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -615,6 +612,8 @@
 		4A42A027BB594340B090722F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6A96B695A1D1481D94DB0B16 /* libRNVectorIcons-tvOS.a */,
+				2EAB0A0261AF4E229B9DAC77 /* libRNGestureHandler.a */,
 				4AFEFEC15DBC476D9CC36E18 /* AntDesign.ttf */,
 				24D759D05815425EBD42BB57 /* Entypo.ttf */,
 				A15B0FEFAD3F4F3AB1726431 /* EvilIcons.ttf */,
@@ -655,6 +654,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CB09502F3A5D489783128975 /* libRNVectorIcons.a */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,

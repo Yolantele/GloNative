@@ -13,7 +13,7 @@ const withForeground = ( ScreenComponent ) => {
       headerStyle: {
         backgroundColor: Styles.colours.backgroundLight,
         height: Styles.layout.isIphoneX ? -10 : -5
-      },
+      }
     }
     
 		render() {

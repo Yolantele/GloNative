@@ -2,28 +2,29 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Button } from 'react-native';
 import Styles from "../../assets/Styles";
 
-export default class CustomButon extends React.Component {
 
-  render() {
-    let container = [styles.container]
-    let { title, onPress, colour, disabled, type} = this.props
 
-    if (type && type === 'round'){
-      container.push( {borderRadius: Styles.shape.roundCorner} )
-    }
+const CustomButon = ( props ) => { 
+  
+  let container = [styles.container]
+  let { title, onPress, colour, disabled, type} = props
 
-    return(
-      <TouchableOpacity
-        style={container}
-      >
-        <Button 
-          title={title}
-          onPress={onPress}
-          color={disabled ? styles.disabled : colour || Styles.colours.darkText}
-        />
-      </TouchableOpacity>
-    )
+  if (type && type === 'round'){
+    container.push( {borderRadius: Styles.shape.roundCorner} )
   }
+
+  return(
+    <TouchableOpacity
+      style={container}
+    >
+      <Button 
+        title={title}
+        onPress={onPress}
+        color={disabled ? styles.disabled : colour || Styles.colours.darkText}
+      />
+    </TouchableOpacity>
+  )
+
 }
 
 const styles = StyleSheet.create({
@@ -47,3 +48,5 @@ const styles = StyleSheet.create({
     color: Styles.colours.greyTransparent
   }
 });
+
+export default CustomButon

@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Alert, Text, Button, Linking , View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 import CustomButon from '../components/designedElements/CustomButton';
 import Styles from '../assets/Styles';
 import withForeground from '../components/hoc/withForeground';
-
-import { incrementCounter, decrementCounter }from '../actions';
+import PageIntro from '../components/PageIntro';
+import { incrementCounter, decrementCounter } from '../actions';
+import text from '../assets/texts'
 
 // redux global state use
 import { connect } from 'react-redux';
@@ -25,29 +26,39 @@ const mapStateToProps = state => {
 class HomeScreen extends React.Component {
 
   _handleHelpPress = () => {
-    Alert.alert('handleHelpPress')
     this.props.incrementCounter()
   };
 
   render() {
     return (
-      <>
-        <View >
-           <Text>{this.props.count}</Text>
+      <ScrollView contentContainerStyle={Styles.layout.centered}>
+        <PageIntro
+          header={text.homepage.header}
+          mainText={text.homepage.mainText}
+        >
+        </PageIntro>
+        <View style={styles.container}>
+          <Text>{this.props.count}</Text>
+          <CustomButon
+            title={'Increment'}
+            onPress={() => this._handleHelpPress()}
+            disabled={false}
+            type={'round'}
+          />
         </View>
 
-        <CustomButon
-          title={'Help Press'}
-          onPress={() => this._handleHelpPress()}
-          disabled={false}
-          type={'round'}
-        />
-      </>
+      </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    alignItems: "center",
+  },
   link: {
     color: 'blue'
   }

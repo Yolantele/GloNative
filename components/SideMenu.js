@@ -16,3 +16,5 @@ export default class SideMenu extends Component {
 const localStyles = StyleSheet.create({
 
 });
+
+

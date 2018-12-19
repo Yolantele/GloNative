@@ -1,6 +1,6 @@
 const HOME_PAGE = {
   header: 'Welcome to Glo.',
-  mainText: 'Tiny habits are the brushstrokes that are shaping you into You.`Make your life a masterpiece’'
+  mainText: 'Tiny habits are the brushstrokes that are shaping you into You'
 }
 
 module.exports = {

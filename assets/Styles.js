@@ -40,20 +40,27 @@ const COLOURS = {
     amber: "#FAA733",
     red: "#EF430F"
   },
-}
+};
 
 const SHAPE = {
   roundCorner: 30,
   bluntCorner: 10,
   sharpCorner: 2,
-}
+};
 
-const WIDTH = Dimensions.get('window').width
-const HEIGHT = Dimensions.get('window').height
+const WIDTH = Dimensions.get('window').width;
+const HEIGHT = Dimensions.get('window').height;
 
 const LAYOUT = {
   isSmallDevice: WIDTH < 375,
-  isIphoneX : isIphoneX()
+  isIphoneX : isIphoneX(),
+
+  centered: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: "center",
+  }
 }
 
 const EFFECTS = {
@@ -66,4 +73,4 @@ module.exports = {
   width: WIDTH,
   height: HEIGHT,
   effects: EFFECTS
-}
+};

@@ -1,0 +1,7 @@
+{
+    "jshint.options": {
+        "esversion": 6
+    },
+    "editor.snippetSuggestions": "none",
+    "editor.hover.enabled": false,
+}

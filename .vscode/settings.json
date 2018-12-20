@@ -4,4 +4,8 @@
     },
     "editor.snippetSuggestions": "none",
     "editor.hover.enabled": false,
+    "editor.formatOnSave": true,
+    "javascript.format.enable": false,
+    "prettier.eslintIntegration": true,
+    "flow.useNPMPackagedFlow": true
 }

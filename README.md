@@ -4,7 +4,6 @@
 
 ![screenshot 2018-12-19 at 16 46 51](https://user-images.githubusercontent.com/30931242/50234488-b86eb780-03ad-11e9-9cf4-22409a6d8b81.png)
 
-
 ## WIP Screen shots
 
 ![screenshot 2018-12-19 at 16 48 41](https://user-images.githubusercontent.com/30931242/50234621-fec41680-03ad-11e9-8389-1d337d265f6c.png)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 import withForeground from '../components/hoc/withForeground';
 
  class ProfileScreen extends React.Component {
@@ -7,9 +7,9 @@ import withForeground from '../components/hoc/withForeground';
   
   render() {
     return (
-      <>
+      <View>
         <Text>'Profile screen'</Text>
-      </>
+      </View>
     );
   }
 }

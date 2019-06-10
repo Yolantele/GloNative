@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
-import CustomButon from '../components/designedElements/CustomButton';
+import CustomButon from '../components/UI/CustomButton';
 import Styles from '../assets/Styles';
 import withForeground from '../components/hoc/withForeground';
 import PageIntro from '../components/PageIntro';

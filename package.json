@@ -19,7 +19,8 @@
     "react-navigation-stack": "^1.0.5",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
-    "redux-devtools-extension": "^2.13.7"
+    "redux-devtools-extension": "^2.13.7",
+    "styled-components": "^4.3.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

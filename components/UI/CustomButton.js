@@ -1,33 +1,18 @@
-import React from 'react';
-import { TouchableOpacity, StyleSheet, Button } from 'react-native';
-import Styles from '../../assets/Styles';
-import { Container } from '../Styled/StyledCustomButton';
+import React from 'react'
+import { TouchableOpacity, Button } from 'react-native'
+import Styles from '../../assets/Styles'
+import { Container } from '../Styled/StyledCustomButton'
 
-const CustomButton = ({
-  title, onPress, colour, disabled, type,
-}) => {
-  // const container = [styles.container];
+const CustomButton = ({ title, onPress, colour, disabled, type }) => 
+<Container type={type} name={`button-${title}-container`}>
+  <TouchableOpacity>
+    <Button
+      name={title}
+      title={title}
+      onPress={onPress}
+      color={disabled ? Styles.colours.greyTransparent : colour || Styles.colours.darkText}
+    />
+  </TouchableOpacity>
+</Container>
 
-  // if (type && type === 'round') container.push({ borderRadius: Styles.shape.roundCorner });
-
-  return (
-    <Container type={type}>
-      {/* <TouchableOpacity style={container}> */}
-      <TouchableOpacity>
-        <Button
-          title={title}
-          onPress={onPress}
-          color={disabled ? styles.disabled : colour || Styles.colours.darkText}
-        />
-      </TouchableOpacity>
-    </Container>
-  );
-};
-
-const styles = StyleSheet.create({
-  disabled: {
-    color: Styles.colours.greyTransparent,
-  },
-});
-
-export default CustomButton;
+export default CustomButton

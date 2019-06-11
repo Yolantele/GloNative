@@ -1,9 +1,18 @@
 /* eslint-disable import/prefer-default-export */
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import Styles from '../../assets/Styles'
 
-let radius = 10
 
-if (props.type && props.type === 'round') radius = Styles.shape.roundCorner
+
+const radius = css`${props => {
+  switch (props.type) {
+    case 'round':
+      return Styles.shape.roundCorner
+    default:
+      return 10
+    }
+  }
+}`
 
 export const Container = styled.View`
   flex-direction: row;

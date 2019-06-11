@@ -2,8 +2,6 @@
 import styled, { css } from 'styled-components'
 import Styles from '../../assets/Styles'
 
-
-
 const radius = css`${props => {
   switch (props.type) {
     case 'round':

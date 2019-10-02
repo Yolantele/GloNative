@@ -5,7 +5,7 @@
   "javascript.format.enable": true,
   "prettier.bracketSpacing": true,
   "prettier.jsxBracketSameLine": true,
-  "prettier.printWidth": 110,
+  "prettier.printWidth": 105,
   "prettier.tabWidth": 2,
   "prettier.singleQuote": true,
   "prettier.semi": false,

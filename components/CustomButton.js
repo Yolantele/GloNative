@@ -1,14 +1,12 @@
-import React from 'react';
-import { TouchableOpacity, StyleSheet, Button } from 'react-native';
-import Styles from '../assets/Styles';
+import React from 'react'
+import { TouchableOpacity, StyleSheet, Button } from 'react-native'
+import Styles from '../assets/Styles'
 
-const CustomButon = ({
-  title, onPress, colour, disabled, type,
-}) => {
-  const container = [styles.container];
+const CustomButon = ({ title, onPress, colour, disabled, type }) => {
+  const container = [styles.container]
 
   if (type && type === 'round') {
-    container.push({ borderRadius: Styles.shape.roundCorner });
+    container.push({ borderRadius: Styles.shape.roundCorner })
   }
 
   return (
@@ -19,8 +17,8 @@ const CustomButon = ({
         color={disabled ? styles.disabled : colour || Styles.colours.darkText}
       />
     </TouchableOpacity>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -37,11 +35,11 @@ const styles = StyleSheet.create({
     shadowColor: Styles.colours.black,
     shadowOffset: { y: 5 },
     shadowOpacity: 0.1,
-    shadowRadius: 6,
+    shadowRadius: 6
   },
   disabled: {
-    color: Styles.colours.greyTransparent,
-  },
-});
+    color: Styles.colours.greyTransparent
+  }
+})
 
-export default CustomButon;
+export default CustomButon

@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 import Styles from '../assets/Styles'
 
 export default class Header extends Component {
-	render() {
-		return(
-      <View style={styles.container}>
-        <Text style={styles.menu}>menu</Text>
-        <Text style={styles.headerTitleStyle}>Glo.</Text>
-        <Text style={styles.menu}>inbox</Text>
+  render() {
+    const { menu, headerTitle, container } = styles
+
+    return (
+      <View style={container}>
+        <Text style={menu}>menu</Text>
+        <Text style={headerTitle}>Glo.</Text>
+        <Text style={menu}>inbox</Text>
       </View>
     )
-	}
+  }
 }
 
 const styles = StyleSheet.create({
-	container: {
+  container: {
     flex: 1,
     height: Styles.layout.isIphoneX ? 90 : 60,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: "center",
+    alignItems: 'center',
     backgroundColor: Styles.colours.backgroundLight,
     borderColor: Styles.colours.backgroundLight,
     paddingLeft: 30,
@@ -28,16 +30,16 @@ const styles = StyleSheet.create({
     shadowColor: Styles.colours.black,
     shadowOffset: { y: 5 },
     shadowOpacity: 0.1,
-    shadowRadius: 10,
+    shadowRadius: 10
   },
-  headerTitleStyle: {
+  headerTitle: {
     fontWeight: 'bold',
     color: Styles.colours.darkText,
-    fontSize: Styles.layout.isIphoneX ? 24 : 18,
+    fontSize: Styles.layout.isIphoneX ? 24 : 18
   },
   menu: {
     fontWeight: '300',
     color: Styles.colours.darkText,
-    fontSize: 12,
-  },
-});
+    fontSize: 12
+  }
+})

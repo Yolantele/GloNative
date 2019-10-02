@@ -1,6 +1,6 @@
-import React from 'react';
-import { Text, StyleSheet, View } from 'react-native';
-import withForeground from '../components/hoc/withForeground';
+import React from 'react'
+import { Text, StyleSheet, View } from 'react-native'
+import withForeground from '../components/hoc/withForeground'
 
 class Profile extends React.Component {
   render() {
@@ -8,10 +8,10 @@ class Profile extends React.Component {
       <View>
         <Text>Profile screen</Text>
       </View>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})
 
-export default withForeground(Profile);
+export default withForeground(Profile)

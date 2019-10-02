@@ -1,7 +1,7 @@
-import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-import Styles from '../assets/Styles';
-import withForeground from '../components/hoc/withForeground';
+import React from 'react'
+import { StyleSheet, Text } from 'react-native'
+import Styles from '../assets/Styles'
+import withForeground from '../components/hoc/withForeground'
 
 class Stats extends React.Component {
   render() {
@@ -9,10 +9,10 @@ class Stats extends React.Component {
       <>
         <Text>Stats Screen</Text>
       </>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})
 
-export default withForeground(Stats);
+export default withForeground(Stats)

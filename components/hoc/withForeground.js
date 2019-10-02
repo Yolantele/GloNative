@@ -1,37 +1,32 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import Header from "../Header";
-import SideMenu from "../SideMenu";
-import Styles from "../../assets/Styles"
+import Header from '../Header';
+import SideMenu from '../SideMenu';
+import Styles from '../../assets/Styles';
 
-
-const withForeground = ( ScreenComponent ) => {
-	return class Foreground extends Component {
-    
+const withForeground = ScreenComponent => class Foreground extends Component {
     static navigationOptions = {
-      headerTitle: <Header/>,
+      headerTitle: <Header />,
       headerStyle: {
         backgroundColor: Styles.colours.backgroundLight,
-        height: Styles.layout.isIphoneX ? -10 : -5
-      }
-    }
-    
-		render() {
+        height: Styles.layout.isIphoneX ? -10 : -5,
+      },
+    };
 
-			return(
-				<View style={styles.wrapper}>
-					<SideMenu/>
+    render() {
+      return (
+        <View style={styles.wrapper}>
+          <SideMenu />
           <ScrollView contentContainerStyle={styles.container}>
             <ScreenComponent
               {...this.props}
               foregroundFor={this.props.navigation.state.routeName}
             />
           </ScrollView>
-				</View>
-			)
-		}
-	}
-}
+        </View>
+      );
+    }
+};
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -39,13 +34,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Styles.colours.background,
     flexDirection: 'column',
-    justifyContent: "space-between"
+    justifyContent: 'space-between',
   },
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
-export default withForeground
+export default withForeground;

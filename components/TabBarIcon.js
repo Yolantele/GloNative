@@ -14,11 +14,11 @@ export default class TabBarIcon extends React.Component {
     return (
       <View style={styles.container}>
         <Image 
-        source={image} 
-        resizeMode={"contain"}
-        resizeMethod={"scale"}
-        style={imageContainer}
-        alt={name + ' alt'}
+          source={image} 
+          resizeMode="contain"
+          resizeMethod="scale"
+          style={imageContainer}
+          alt={`Image of ${name}`}
         />
       </View>
     );

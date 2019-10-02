@@ -1,14 +1,23 @@
-import React from 'react';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react'
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
+import Styles from '../assets/Styles'
+import TabBarIcon from '../components/TabBarIcon'
+import { Home, Profile, Stats, Workshop } from '../screens'
 
-import Styles from '../assets/Styles';
+const ACTIVE_HOME = require('../assets/images/home-icon-active.png')
+const INACTIVE_HOME = require('../assets/images/home-icon.png')
+const ACTIVE_WORKSHOP = require('../assets/images/workshop-icon-active.png')
+const INACTIVE_WORKSHOP = require('../assets/images/workshop-icon.png')
+const ACTIVE_PROFILE = require('../assets/images/profile-icon-active.png')
+const INACTIVE_PROFILE = require('../assets/images/profile-icon.png')
+const ACTIVE_STATS = require('../assets/images/stats-icon-active.png')
+const INACTIVE_STATS = require('../assets/images/stats-icon.png')
 
-import TabBarIcon from '../components/TabBarIcon';
-import {
-  Home, Profile, Stats, Workshop,
-} from '../screens';
-
-const HomeStack = createStackNavigator({ Home });
+const HomeStack = createStackNavigator({ Home })
+const ProfileStack = createStackNavigator({ Profile })
+const StatsStack = createStackNavigator({ Stats })
+const WorkshopStack = createStackNavigator({ Workshop })
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
@@ -16,17 +25,11 @@ HomeStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name="home"
-      image={
-        focused
-          ? require('../assets/images/home-icon-active.png')
-          : require('../assets/images/home-icon.png')
-      }
+      image={focused ? ACTIVE_HOME : INACTIVE_HOME}
       imageHeight={20}
     />
-  ),
-};
-
-const WorkshopStack = createStackNavigator({ Workshop });
+  )
+}
 
 WorkshopStack.navigationOptions = {
   tabBarLabel: 'Workshop',
@@ -34,17 +37,11 @@ WorkshopStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name="workshop"
-      image={
-        focused
-          ? require('../assets/images/workshop-icon-active.png')
-          : require('../assets/images/workshop-icon.png')
-      }
+      image={focused ? ACTIVE_WORKSHOP : INACTIVE_WORKSHOP}
       imageHeight={20}
     />
-  ),
-};
-
-const ProfileStack = createStackNavigator({ Profile });
+  )
+}
 
 ProfileStack.navigationOptions = {
   tabBarLabel: 'Profile',
@@ -52,17 +49,11 @@ ProfileStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name="profile"
-      image={
-        focused
-          ? require('../assets/images/profile-icon-active.png')
-          : require('../assets/images/profile-icon.png')
-      }
+      image={focused ? ACTIVE_PROFILE : INACTIVE_PROFILE}
       imageHeight={24}
     />
-  ),
-};
-
-const StatsStack = createStackNavigator({ Stats });
+  )
+}
 
 StatsStack.navigationOptions = {
   tabBarLabel: 'Stats',
@@ -70,22 +61,18 @@ StatsStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name="stats"
-      image={
-        focused
-          ? require('../assets/images/stats-icon-active.png')
-          : require('../assets/images/stats-icon.png')
-      }
+      image={focused ? ACTIVE_STATS : INACTIVE_STATS}
       imageHeight={20}
     />
-  ),
-};
+  )
+}
 
 const TabScreens = createBottomTabNavigator(
   {
     HomeStack,
     WorkshopStack,
     StatsStack,
-    ProfileStack,
+    ProfileStack
   },
   {
     tabBarOptions: {
@@ -93,7 +80,7 @@ const TabScreens = createBottomTabNavigator(
       inactiveTintColor: Styles.colours.darkestTransparency,
       labelStyle: {
         fontSize: 12,
-        fontWeight: '600',
+        fontWeight: '600'
       },
       style: {
         backgroundColor: Styles.colours.backgroundLight,
@@ -105,11 +92,11 @@ const TabScreens = createBottomTabNavigator(
         shadowColor: Styles.colours.black,
         shadowOffset: { y: 5 },
         shadowOpacity: 0.1,
-        shadowRadius: 10,
-      },
+        shadowRadius: 10
+      }
       // headerMode: 'none'
-    },
-  },
-);
+    }
+  }
+)
 
-export default TabScreens;
+export default TabScreens

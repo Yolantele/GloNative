@@ -3,7 +3,10 @@ import React from 'react'
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import Styles from '../assets/Styles'
 import TabBarIcon from '../components/TabBarIcon'
-import { Home, Profile, Stats, Workshop } from '../screens'
+import Home from '../screens/Home'
+import Profile from '../screens/Profile'
+import Stats from '../screens/Stats'
+import Workshop from '../screens/Workshop'
 
 const ACTIVE_HOME = require('../assets/images/home-icon-active.png')
 const INACTIVE_HOME = require('../assets/images/home-icon.png')

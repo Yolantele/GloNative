@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import { CustomButon, PageIntro } from '../components'
+import PageIntro from '../components/PageIntro'
+import CustomButton from '../components/CustomButton'
 import Styles from '../assets/Styles'
 import withForeground from '../components/hoc/withForeground'
 import text from '../assets/texts'
@@ -18,7 +19,7 @@ class Home extends React.Component {
         <PageIntro header={header} mainText={mainText} />
         <View style={styles.container}>
           <Text>{count}</Text>
-          <CustomButon
+          <CustomButton
             title="Increment"
             onPress={() => this._handleHelpPress()}
             disabled={false}

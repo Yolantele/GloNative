@@ -14,12 +14,12 @@ export default class PageIntro extends React.Component {
 
   render() {
     const { header, mainText } = this.props
-    const { container, layout, header, mainText } = styles
+    const { container, layout, headerStyle, mainTextStyle } = styles
 
     return (
       <View style={container}>
         <View style={layout}>
-          <Text style={header}>{header}</Text>
+          <Text style={headerStyle}>{header}</Text>
 
           <Text
             style={mainTextStyle}
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     backgroundColor: Styles.colours.backgroundLight,
     height: Styles.height * 0.3
   },
-  header: {
+  headerStyle: {
     fontSize: 20,
     fontWeight: '600',
     color: Styles.colours.secondary,
